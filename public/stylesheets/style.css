@@ -33,7 +33,7 @@ header h1 {
     cursor: default;
 }
 
-header h1:hover{
+header h1:hover {
     transform: scale(1.04);
 }
 
@@ -60,15 +60,15 @@ header a:hover {
     transform: scale(1.04);
 }
 
-footer{
-    background-color: #FAF5EC; 
-    padding: 20px; 
+footer {
+    background-color: #faf5ec;
+    padding: 20px;
     height: 600px;
     display: flex;
     justify-content: center;
 }
 
-.footermiddle{
+.footermiddle {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -76,17 +76,17 @@ footer{
     align-items: center;
 }
 
-.mail{
+.mail {
     display: flex;
     flex-direction: row;
     margin-top: 60px;
 }
 
-.mail p{
+.mail p {
     margin-left: 15px;
 }
 
-.footermiddle a{
+.footermiddle a {
     font-family: Montserrat, sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -97,7 +97,7 @@ footer{
     margin-top: 30px;
 }
 
-.akoht{
+.akoht {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 32px;
@@ -106,7 +106,7 @@ footer{
     margin-bottom: 30px;
 }
 
-@media(max-width:1100px){
+@media (max-width: 1100px) {
     header h1 {
         font-family: Montserrat, sans-serif;
         font-weight: 600;
@@ -122,21 +122,20 @@ footer{
     nav {
         display: none;
     }
-    .map{
+    .map {
         width: 70vw;
     }
-    .akoht{
+    .akoht {
         font-size: 24px;
     }
 }
 
 /*header and footer end*/
 
-
 section {
     position: relative;
 }
-  
+
 .land {
     width: 100%;
     height: auto;
@@ -144,7 +143,7 @@ section {
     height: 55vw;
     object-fit: cover;
 }
-  
+
 .content {
     position: absolute;
     top: 30%;
@@ -152,7 +151,7 @@ section {
     text-align: left;
     max-width: 400px;
 }
-  
+
 .content h1 {
     font-size: 36px;
     margin-bottom: 1rem;
@@ -161,7 +160,7 @@ section {
     text-align: left;
     cursor: default;
 }
-  
+
 .content button {
     margin-top: 1rem;
     background-color: rgba(172, 143, 84, 1);
@@ -169,23 +168,23 @@ section {
     border: none;
     font-size: 1.5rem;
     border-radius: 4px;
-    cursor: pointer; 
+    cursor: pointer;
     width: 251.51px;
     height: 47px;
     padding: 0;
     transition: ease 0.3s all;
 }
 
-.content button:hover{
+.content button:hover {
     transform: scale(1.02);
     background-color: rgb(151, 126, 74);
 }
 
-.hero{
+.hero {
     margin-top: 10vw;
     margin-bottom: 10vw;
 }
-.mis h2{
+.mis h2 {
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -195,7 +194,7 @@ section {
     cursor: default;
 }
 
-.her{
+.her {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -215,26 +214,26 @@ section {
     cursor: default;
 }
 
-.hero3 h3{
+.hero3 h3 {
     font-weight: 400;
     font-size: 24px;
     color: rgba(172, 143, 84, 1);
 }
 
-.hero3 p{
+.hero3 p {
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
 }
 
-.hero3 img{
+.hero3 img {
     max-width: 100px;
     justify-content: center;
     transition: ease 0.3s all;
 }
 
-.hero3 img:hover{
+.hero3 img:hover {
     transform: scale(1.12);
 }
 
@@ -242,22 +241,22 @@ section {
     margin-top: 4vw;
 }
 
-.tenpic{
+.tenpic {
     max-width: 100%;
     min-width: 100%;
 }
 
-@media(max-width:1400px){
-    .hero3{
+@media (max-width: 1400px) {
+    .hero3 {
         max-width: 280px;
     }
 }
 
-@media(max-width:1100px){
-    .hero3{
+@media (max-width: 1100px) {
+    .hero3 {
         max-width: 60vw;
     }
-    .mis{
+    .mis {
         margin-bottom: 50px;
     }
     .content h1 {
@@ -270,7 +269,7 @@ section {
         border: none;
         font-size: 16px;
         border-radius: 4px;
-        cursor: pointer; 
+        cursor: pointer;
         width: 138px;
         height: 35px;
     }
@@ -282,7 +281,7 @@ section {
         text-align: left;
         max-width: 300px;
     }
-    .her{
+    .her {
         flex-direction: column;
     }
     .land {
@@ -290,23 +289,23 @@ section {
         display: block;
         object-fit: cover;
     }
-    .hero3 p{
+    .hero3 p {
         font-size: 12px;
     }
-    .hero3 h3{
+    .hero3 h3 {
         font-size: 16px;
     }
-    .hero3 img{
+    .hero3 img {
         max-width: 70px;
     }
-    .mis h2{
+    .mis h2 {
         font-size: 24px;
     }
 }
 
 /*teenused*/
 
-.tee{
+.tee {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -314,81 +313,80 @@ section {
     text-align: center;
 }
 
-.tee h2{
-    color: #AC8F54;
+.tee h2 {
+    color: #ac8f54;
     font-size: 36px;
 }
 
-.tee button{
+.tee button {
     margin: 3rem;
     background-color: rgba(172, 143, 84, 1);
     color: white;
     border: none;
     font-size: 1.5rem;
     border-radius: 4px;
-    cursor: pointer; 
+    cursor: pointer;
     width: 251.51px;
     height: 47px;
     padding: 0;
 }
 
-.tee button:hover{
+.tee button:hover {
     transform: scale(1.02);
     background-color: rgb(151, 126, 74);
 }
 
-.mass{
+.mass {
     display: flex;
     flex-direction: row;
 }
 
-.textmas h3{
-    color: #AC8F54;
+.textmas h3 {
+    color: #ac8f54;
 }
 
-.massas{
+.massas {
     margin-left: 3rem;
     margin-right: 3rem;
 }
 
-.massas img{
+.massas img {
     transition: ease 0.3s all;
 }
 
-.massas img:hover{
+.massas img:hover {
     transform: scale(1.02);
-    
 }
 
-@media(max-width:1300px){
-    .massas{
+@media (max-width: 1300px) {
+    .massas {
         margin-left: 15px;
         margin-right: 15px;
     }
 }
 
-@media(max-width:1100px){
-    .mass{
+@media (max-width: 1100px) {
+    .mass {
         flex-direction: column;
     }
-    .tee button{
+    .tee button {
         margin-top: 1rem;
         background-color: rgba(172, 143, 84, 1);
         color: white;
         border: none;
         font-size: 16px;
         border-radius: 4px;
-        cursor: pointer; 
+        cursor: pointer;
         width: 138px;
         height: 35px;
     }
-    .tee h2{
+    .tee h2 {
         font-size: 24px;
     }
-    h3{
+    h3 {
         font-size: 16px;
     }
-    p{
+    p {
         font-size: 12px;
     }
 }
