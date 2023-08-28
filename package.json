@@ -13,5 +13,8 @@
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
     "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    ""
   }
 }
