@@ -3,8 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var Sass = require('sass');
-Sass.compile('./public/stylesheets/style.sass')
+var fs = require('fs');
+{
+  var Sass = require('sass');
+  let result = Sass.compile('./sass/style.sass');
+  fs.writeFileSync('./public/stylesheets/stylesass.css', result.css);
+}
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
