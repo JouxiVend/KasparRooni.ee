@@ -138,7 +138,7 @@ section {
 
 .land {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     display: block;
     height: 55vw;
     object-fit: cover;
