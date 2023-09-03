@@ -4,16 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const fs = require('fs');
-{
-  const Sass = require('sass');
-  let result = Sass.compile('./sass/style.sass');
-  fs.writeFileSync('./public/stylesheets/stylesass.css', result.css);
-}
+const indexRouter = require('./routes/index');
+const adminRouter = require('./routes/admin');
+const sass = require('sass');
 
-var indexRouter = require('./routes/index');
-var adminRouter = require('./routes/admin');
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,14 +18,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(sassMiddleware({
-//   src: path.join(__dirname, 'public'),
-//   dest: path.join(__dirname, 'public'),
-//   indentedSyntax: true, // true = .sass and false = .scss
-//   sourceMap: true
-// }));
+const filesList = fs.readdirSync(path.resolve(`${__dirname}/sass`), (err, files) => files.filter((e) => path.extname(e).toLowerCase() === '.sass'));
+for (let e of filesList) {
+  let result = sass.compile(__dirname + "/sass/" + e);
+  fs.writeFileSync(__dirname + '/public/stylesheets/' + e.slice(0, -4) + 'css', result.css);
+} 
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 
