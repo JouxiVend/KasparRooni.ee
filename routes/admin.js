@@ -4,13 +4,13 @@ var router = express.Router();
 /* GET users listing. */
 
 router.get('/login', function(req, res, next) {
-  res.send('admin-login');
+  res.render('admin-login');
 });
 router.post('/login', function(req, res, next) {
   res.send('admin-login');
 });
 router.get('/broneeringud', validate, function(req, res, next) {
-
+  res.render('broneering');
 });
 
 async function validate(req, res, next) {
