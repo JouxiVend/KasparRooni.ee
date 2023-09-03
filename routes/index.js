@@ -3,16 +3,19 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 router.get('/kontakt', function(req, res, next) {
-  res.render('kontakt', { title: 'Express' });
+  res.render('kontakt');
 });
 router.get('/minust', function(req, res, next) {
-  res.render('minust', { title: 'Express' });
+  res.render('minust');
 });
 router.get('/teenused', function(req, res, next) {
-  res.render('teenused', { title: 'Express' });
+  res.render('teenused');
+});
+router.get('/broneering', function(req, res, next) {
+  res.render('broneering');
 });
 
 module.exports = router;
