@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 const filesList = fs.readdirSync(path.resolve(`${__dirname}/sass`), (err, files) => files.filter((e) => path.extname(e).toLowerCase() === '.sass'));
 for (let e of filesList) {
-  let result = sass.compile(__dirname + "/sass/" + e);
-  fs.writeFileSync(__dirname + '/public/stylesheets/' + e.slice(0, -4) + 'css', result.css);
-} 
+  let result = sass.compile(`${__dirname}/sass/${e}`);
+  fs.writeFileSync(`${__dirname}/public/stylesheets/${e.slice(0, -4)}css`, result.css);
+}
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
