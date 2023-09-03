@@ -6,16 +6,22 @@ var router = express.Router();
 router.get('/login', function(req, res, next) {
   res.render('admin-login');
 });
-router.post('/login', function(req, res, next) {
-  res.send('admin-login');
+router.post('/login', validate, function(req, res, next) {
+  res.redirect('/admin/broneering');
 });
-router.get('/broneeringud', validate, function(req, res, next) {
+router.get('/broneering', function(req, res, next) {
+  res.render('broneering');
+});
+router.post('/broneering', validate, function(req, res, next) {
   res.render('broneering');
 });
 
 async function validate(req, res, next) {
-
-  next();
+  if (req.header["X-auth-token"]) {
+    next();
+  } else {
+    res.redirect('/admin/login');
+  }
 }
 
 module.exports = router;
