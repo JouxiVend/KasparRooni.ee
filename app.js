@@ -18,10 +18,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+/**
+ * Sass compiling
+ */
 for (let e of fs.readdirSync(path.resolve(`${__dirname}/sass`), (err, files) => files.filter((e) => path.extname(e).toLowerCase() === '.sass'))) {
   let result = sass.compile(`${__dirname}/sass/${e}`);
   fs.writeFileSync(`${__dirname}/public/stylesheets/${e.slice(0, -4)}css`, result.css);
 }
+/** */
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
