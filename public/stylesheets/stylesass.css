@@ -1,0 +1,10 @@
+a {
+  background-color: red;
+}
+
+.randomclass {
+  background-color: blue;
+}
+.randomclass:hover {
+  background-color: green;
+}
